@@ -14,43 +14,46 @@ import {
   View,
   Text,
   StatusBar,
+  Image,
 } from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+import {Account, Rumah, Order, Help, Chatting} from './icons';
 
 const App = () => {
   return (
-    <View style={{backgroundColor: 'pink', flex: 1}}>
+    <View style={{flex: 1}}>
       {/* <Text>CloneGojek</Text> */}
       <View style={{flex: 1, backgroundColor: 'blue'}}></View>
-      <View
-        style={{height: 53, backgroundColor: 'yellow', flexDirection: 'row'}}>
-        <View style={{backgroundColor: 'red', flex: 1, alignItems: 'center'}}>
-          <Text>Home</Text>
+      <View style={{height: 53, flexDirection: 'row'}}>
+        <View style={{flex: 1, alignItems: 'center'}}>
+          <Rumah width={26} height={26} />
+          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
+            Home
+          </Text>
         </View>
-        <View style={{backgroundColor: 'green', flex: 1, alignItems: 'center'}}>
-          <Text>Orders</Text>
+        <View style={{flex: 1, alignItems: 'center'}}>
+          <Order width={26} height={26} />
+          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
+            Orders
+          </Text>
         </View>
-        <View
-          style={{backgroundColor: 'salmon', flex: 1, alignItems: 'center'}}>
-          <Text>Help</Text>
+        <View style={{flex: 1, alignItems: 'center'}}>
+          <Help width={26} height={26} />
+          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
+            Help
+          </Text>
         </View>
-        <View
-          style={{backgroundColor: 'orange', flex: 1, alignItems: 'center'}}>
-          <Text>Help</Text>
+        <View style={{flex: 1, alignItems: 'center'}}>
+          <Chatting width={26} height={26} />
+          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
+            Inbox
+          </Text>
         </View>
-        <View
-          style={{backgroundColor: 'purple', flex: 1, alignItems: 'center'}}>
-          <Text>Inbox</Text>
-        </View>
-        <View style={{backgroundColor: 'green', flex: 1, alignItems: 'center'}}>
-          <Text>Account</Text>
+        <View style={{flex: 1, alignItems: 'center'}}>
+          <Account width={26} height={26} />
+          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
+            Account
+          </Text>
         </View>
       </View>
     </View>
