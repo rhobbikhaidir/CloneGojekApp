@@ -15,7 +15,7 @@ import PayFeatures from './play.svg';
 import TopUp from './topup.svg';
 import More from './more.svg';
 import QrCode from './qrcode.svg';
-import GoMore from './gomore.svg';
+import GoMore from './GOMORE1.svg';
 import GoBlueBird from './gobluebird.svg';
 import GoCar from './gocar.svg';
 import GoDeals from './godeals.svg';
