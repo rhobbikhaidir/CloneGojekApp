@@ -1,11 +1,3 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
-
 import React from 'react';
 import {
   SafeAreaView,
@@ -15,6 +7,7 @@ import {
   Text,
   Image,
   TextInput,
+  TouchableOpacity,
 } from 'react-native';
 
 import {
@@ -377,14 +370,111 @@ const App = () => {
                 style={{height: 170, width: '100%', borderRadius: 6}}
               />
             </View>
-            <View style={{paddingTop: 16, paddingBottom: 20, }}>
-              <Text style={{fontSize: 16, fontWeight: 'bold', color: '#1c1c1c'}}>GO-NEWS</Text>
-              <Text style={{fontSize: 14, fontWeight: 'normal', color: '#7a7a7a'}}>Pembasket Epoy Mengalahkan, Pembaset NBA di USA</Text>
+            <View
+              style={{
+                paddingTop: 16,
+                paddingBottom: 20,
+                borderBottomColor: '#e8e9ed',
+                borderBottomWidth: 1,
+              }}>
+              <Text
+                style={{fontSize: 16, fontWeight: 'bold', color: '#1c1c1c'}}>
+                GO-NEWS
+              </Text>
+              <Text
+                style={{
+                  fontSize: 14,
+                  fontWeight: 'normal',
+                  color: '#7a7a7a',
+                  marginBottom: 11,
+                }}>
+                Pembasket Epoy Mengalahkan, Pembasket NBA di USA
+              </Text>
+              <TouchableOpacity
+                style={{
+                  backgroundColor: '#61a756',
+                  paddingHorizontal: 12,
+                  paddingVertical: 11,
+                  alignSelf: 'flex-end',
+                  borderRadius: 4,
+                }}>
+                <Text
+                  style={{fontSize: 13, fontWeight: 'bold', color: 'white'}}>
+                  READ
+                </Text>
+              </TouchableOpacity>
             </View>
           </View>
         </View>
+        {/* internal Informaion Section
+         */}
+        <View>
+          
+        </View>
+        {/* GoFood Banner Section */}
+        <View style={{padding: 16}}>
+          <View style={{position: 'relative'}}>
+            <Image
+              source={require('./dummy/FoodSection.jpg')}
+              style={{height: 170, width: '100%', borderRadius: 6}}
+            />
+            <View
+              style={{
+                width: '100%',
+                height: '100%',
+                position: 'absolute',
+                backgroundColor: 'black',
+                opacity: 0.1,
+                borderRadius: 6,
+              }}
+            />
+            <View
+              style={{
+                position: 'absolute',
+                bottom: 0,
+                left: 0,
+                width: '100%',
+                flexDirection: 'row',
+                alignItems: 'center',
+                paddingHorizontal: 16,
+                paddingBottom: 16,
+              }}>
+              <View>
+                <Text
+                  style={{
+                    fontSize: 18,
+                    fontWeight: 'bold',
+                    color: 'white',
+                    marginBottom: 8,
+                  }}>
+                  Free GO-FOOD voucher
+                </Text>
+                <Text style={{fontSize: 12, fontWeight: '500', color: 'white'}}>
+                  Quick, before they run out!
+                </Text>
+              </View>
+              <View style={{flex: 1, paddingLeft: 16}}>
+                <TouchableOpacity
+                  style={{
+                    backgroundColor: '#61a756',
+                    paddingHorizontal: 12,
+                    paddingVertical: 11,
+                    alignSelf: 'center',
+                    borderRadius: 4,
+                  }}>
+                  <Text
+                    style={{fontSize: 13, fontWeight: 'bold', color: 'white'}}>
+                    GET VOUCHER
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          </View>
+          <View style={{borderBottomColor: '#e8e9ed', borderBottomWidth: 1, marginBottom: 20, marginTop: 16}} />
+        </View>
       </ScrollView>
-      <View></View>
+
+      {/* Navbar */}
       <View style={{borderWidth: 0.2, borderTopColor: 'white'}} />
       <View style={{height: 53, flexDirection: 'row'}}>
         <View style={{flex: 1, alignItems: 'center', marginTop: 5}}>
