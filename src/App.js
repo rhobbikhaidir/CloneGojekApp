@@ -31,8 +31,7 @@ import {
   GoFood,
   GoMore,
   LaptopFb,
-} from './icons';
-import search from './icons/Search.png';
+} from './assest/icons';
 
 const App = () => {
   return (
@@ -61,7 +60,7 @@ const App = () => {
                 }}
               />
               <Image
-                source={search}
+                source={require('./assest/dummy/Search.png')}
                 style={{position: 'absolute', top: 23, left: 10}}
               />
             </View>
@@ -367,7 +366,7 @@ const App = () => {
           <View style={{paddingTop: 16, paddingHorizontal: 16}}>
             <View>
               <Image
-                source={require('./dummy/basket.jpg')}
+                source={require('./assest/dummy/basket.jpg')}
                 style={{height: 170, width: '100%', borderRadius: 6}}
               />
             </View>
@@ -464,7 +463,7 @@ const App = () => {
         <View style={{padding: 16}}>
           <View style={{position: 'relative'}}>
             <Image
-              source={require('./dummy/FoodSection.jpg')}
+              source={require('./assest/dummy/FoodSection.jpg')}
               style={{height: 170, width: '100%', borderRadius: 6}}
             />
             <View
@@ -561,7 +560,7 @@ const App = () => {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150}}>
                 <Image
-                  source={require('./dummy/nasipadang.jpg')}
+                  source={require('./assest/dummy/nasipadang.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -584,7 +583,7 @@ const App = () => {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150}}>
                 <Image
-                  source={require('./dummy/ayamgeprek.jpg')}
+                  source={require('./assest/dummy/ayamgeprek.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -607,7 +606,7 @@ const App = () => {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150}}>
                 <Image
-                  source={require('./dummy/bakso.jpeg')}
+                  source={require('./assest/dummy/bakso.jpeg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -630,7 +629,7 @@ const App = () => {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150}}>
                 <Image
-                  source={require('./dummy/gadogado.jpg')}
+                  source={require('./assest/dummy/gadogado.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -653,7 +652,7 @@ const App = () => {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150}}>
                 <Image
-                  source={require('./dummy/martabak.jpg')}
+                  source={require('./assest/dummy/martabak.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -676,7 +675,7 @@ const App = () => {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150}}>
                 <Image
-                  source={require('./dummy/pecelayam.jpg')}
+                  source={require('./assest/dummy/pecelayam.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -699,7 +698,7 @@ const App = () => {
             <View style={{marginRight: 16}}>
               <View style={{width: 150, height: 150}}>
                 <Image
-                  source={require('./dummy/sateayam.jpg')}
+                  source={require('./assest/dummy/sateayam.jpg')}
                   style={{
                     width: undefined,
                     height: undefined,
@@ -725,8 +724,8 @@ const App = () => {
               borderBottomColor: '#e8e9ed',
               borderBottomWidth: 1,
               marginTop: 16,
-              marginBottom: 20
-              marginHorizontal: 16
+              marginBottom: 20,
+              marginHorizontal: 16,
             }}
           />
         </View>
