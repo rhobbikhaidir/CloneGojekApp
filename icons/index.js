@@ -23,6 +23,7 @@ import GoFood from './gofood.svg';
 import GoPulsa from './gopulsa.svg';
 import GoRide from './goride.svg';
 import GoSend from './gosend.svg';
+import LaptopFb from './LaptopFB.svg';
 
 export {
   Account,
@@ -50,4 +51,5 @@ export {
   ChattingActive,
   Promo,
   Hot,
+  LaptopFb,
 };

@@ -30,6 +30,7 @@ import {
   GoPulsa,
   GoFood,
   GoMore,
+  LaptopFb,
 } from './icons';
 import search from './icons/Search.png';
 
@@ -408,8 +409,56 @@ const App = () => {
         </View>
         {/* internal Informaion Section
          */}
-        <View>
-          
+        <View style={{padding: 16, paddingBottom: 0}}>
+          <Text
+            style={{
+              fontSize: 17,
+              color: '#1c1c1c',
+              marginTop: 15,
+              marginBottom: 20,
+            }}>
+            Complete your profile
+          </Text>
+          <View style={{flexDirection: 'row'}}>
+            <View>
+              <LaptopFb width={100} height={100} />
+            </View>
+            <View style={{marginLeft: 16, flex: 1}}>
+              <Text
+                style={{fontSize: 15, fontWeight: 'bold', color: '#4a4a4a'}}>
+                Connect with Facebook
+              </Text>
+              <Text
+                style={{
+                  fontSize: 15,
+                  fontWeight: 'normal',
+                  color: '#4a4a4a',
+                  width: '70%',
+                }}>
+                Login faster without verfication code{' '}
+              </Text>
+            </View>
+          </View>
+          <TouchableOpacity
+            style={{
+              backgroundColor: '#61a756',
+              paddingHorizontal: 12,
+              paddingVertical: 11,
+              alignSelf: 'flex-end',
+              borderRadius: 4,
+            }}>
+            <Text style={{fontSize: 13, fontWeight: 'bold', color: 'white'}}>
+              CONNECT
+            </Text>
+          </TouchableOpacity>
+          <View
+            style={{
+              borderBottomColor: '#e8e9ed',
+              borderBottomWidth: 1,
+              marginBottom: 20,
+              marginTop: 16,
+            }}
+          />
         </View>
         {/* GoFood Banner Section */}
         <View style={{padding: 16}}>
@@ -470,7 +519,216 @@ const App = () => {
               </View>
             </View>
           </View>
-          <View style={{borderBottomColor: '#e8e9ed', borderBottomWidth: 1, marginBottom: 20, marginTop: 16}} />
+          <View
+            style={{
+              borderBottomColor: '#e8e9ed',
+              borderBottomWidth: 1,
+              marginTop: 16,
+            }}
+          />
+        </View>
+        {/* Nearbly Go-food */}
+        <View>
+          <View>
+            <Text
+              style={{
+                fontSize: 16,
+                fontWeight: 'bold',
+                color: '#1c1c1c',
+                marginLeft: 16,
+              }}>
+              GO-FOOD
+            </Text>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              marginBottom: 16,
+              paddingHorizontal: 16,
+            }}>
+            <Text style={{fontSize: 17, fontWeight: 'bold', color: '#1c1c1c'}}>
+              Nearbly Restaurants
+            </Text>
+            <Text style={{fontSize: 17, fontWeight: 'bold', color: '#61a756'}}>
+              See All
+            </Text>
+          </View>
+          <ScrollView
+            horizontal={true}
+            showsHorizontalScrollIndicator={false}
+            style={{flexDirection: 'row', paddingLeft: 16}}>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150}}>
+                <Image
+                  source={require('./dummy/nasipadang.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    flex: 1,
+                    borderRadius: 8,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1c1c1c',
+                  marginTop: 12,
+                }}>
+                Nasi Padang
+              </Text>
+            </View>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150}}>
+                <Image
+                  source={require('./dummy/ayamgeprek.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    flex: 1,
+                    borderRadius: 8,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1c1c1c',
+                  marginTop: 12,
+                }}>
+                Ayam Geprek
+              </Text>
+            </View>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150}}>
+                <Image
+                  source={require('./dummy/bakso.jpeg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    flex: 1,
+                    borderRadius: 8,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1c1c1c',
+                  marginTop: 12,
+                }}>
+                Bakso
+              </Text>
+            </View>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150}}>
+                <Image
+                  source={require('./dummy/gadogado.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    flex: 1,
+                    borderRadius: 8,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1c1c1c',
+                  marginTop: 12,
+                }}>
+                Gado-Gado
+              </Text>
+            </View>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150}}>
+                <Image
+                  source={require('./dummy/martabak.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    flex: 1,
+                    borderRadius: 8,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1c1c1c',
+                  marginTop: 12,
+                }}>
+                Martabak Spesial
+              </Text>
+            </View>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150}}>
+                <Image
+                  source={require('./dummy/pecelayam.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    flex: 1,
+                    borderRadius: 8,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1c1c1c',
+                  marginTop: 12,
+                }}>
+                Pecel Ayam
+              </Text>
+            </View>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150}}>
+                <Image
+                  source={require('./dummy/sateayam.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    flex: 1,
+                    borderRadius: 8,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1c1c1c',
+                  marginTop: 12,
+                }}>
+                Sate ayam
+              </Text>
+            </View>
+          </ScrollView>
+          <View
+            style={{
+              borderBottomColor: '#e8e9ed',
+              borderBottomWidth: 1,
+              marginTop: 16,
+              marginBottom: 20
+              marginHorizontal: 16
+            }}
+          />
         </View>
       </ScrollView>
 
