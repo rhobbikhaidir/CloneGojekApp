@@ -10,29 +10,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 
-import {
-  Account,
-  Rumah,
-  Order,
-  Help,
-  Chatting,
-  RumahActive,
-  Nearbly,
-  TopUp,
-  More,
-  PayFeatures,
-  QrCode,
-  GoRide,
-  GoCar,
-  GoBlueBird,
-  GoSend,
-  GoDeals,
-  GoPulsa,
-  GoFood,
-  GoMore,
-  LaptopFb,
-} from './assest/icons';
-// import GopayFeature from './components/molecules/gopayFeature/index';
 import MainFeature from './components/molecules/MainFeature';
 import GopayFeature from './components/molecules/GopayFeature';
 import SearchFeature from './components/molecules/SearhFeature';
@@ -40,6 +17,9 @@ import GoNews from './components/molecules/GoNews';
 import GoInfo from './components/molecules/GoInfo';
 import GoBanner from './components/molecules/GoBanner';
 import ScrollableProduct from './container/organisms/ScrollableProduct';
+import NavBarIcon from './components/molecules/NavBarIcon';
+import GopaySaldo from './components/molecules/GopaySaldo';
+import HomeGopayFeature from './container/organisms/HomeGopayFeature';
 
 const App = () => {
   return (
@@ -50,48 +30,8 @@ const App = () => {
           <SearchFeature />
           {/*Gopay*/}
           <View style={{marginHorizontal: 17, marginTop: 20}}>
-            <View
-              style={{
-                flexDirection: 'row',
-                justifyContent: 'space-between',
-                backgroundColor: '#2c5fb8',
-                borderTopLeftRadius: 10,
-                borderTopRightRadius: 10,
-                padding: 14,
-              }}>
-              <Text style={{color: 'white', fontSize: 14, fontWeight: 'bold'}}>
-                GOPAY
-              </Text>
-              <Text style={{color: 'white', fontSize: 17, fontWeight: 'bold'}}>
-                Rp 50.000
-              </Text>
-            </View>
-            <View
-              style={{
-                flexDirection: 'row',
-                paddingTop: 20,
-                paddingBottom: 14,
-                backgroundColor: '#2f65bd',
-                borderBottomLeftRadius: 10,
-                borderBottomRightRadius: 10,
-              }}>
-              <GopayFeature
-                source={require('./assest/icon/pay.png')}
-                title="Pay"
-              />
-              <GopayFeature
-                source={require('./assest/icon/nearbly.png')}
-                title="Nearbly"
-              />
-              <GopayFeature
-                source={require('./assest/icon/topup.png')}
-                title="Top Up"
-              />
-              <GopayFeature
-                source={require('./assest/icon/more.png')}
-                title="More"
-              />
-            </View>
+            <GopaySaldo />
+            <HomeGopayFeature />
           </View>
           {/* main features */}
           <View
@@ -166,44 +106,7 @@ const App = () => {
 
       {/* Navbar */}
       <View style={{borderWidth: 0.2, borderTopColor: 'white'}} />
-      <View style={{height: 53, flexDirection: 'row'}}>
-        <View style={{flex: 1, alignItems: 'center', marginTop: 5}}>
-          <RumahActive width={26} height={26} />
-          <Text
-            style={{
-              fontSize: 10,
-              color: '#545454',
-              marginTop: 4,
-              color: '#43ab4a',
-            }}>
-            Home
-          </Text>
-        </View>
-        <View style={{flex: 1, alignItems: 'center', marginTop: 5}}>
-          <Order width={26} height={26} />
-          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
-            Orders
-          </Text>
-        </View>
-        <View style={{flex: 1, alignItems: 'center', marginTop: 5}}>
-          <Help />
-          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
-            Help
-          </Text>
-        </View>
-        <View style={{flex: 1, alignItems: 'center', marginTop: 5}}>
-          <Chatting width={26} height={26} />
-          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
-            Inbox
-          </Text>
-        </View>
-        <View style={{flex: 1, alignItems: 'center', marginTop: 5}}>
-          <Account width={26} height={26} />
-          <Text style={{fontSize: 10, color: '#545454', marginTop: 4}}>
-            Account
-          </Text>
-        </View>
-      </View>
+      <NavBarIcon />
     </View>
   );
 };
