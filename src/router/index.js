@@ -2,18 +2,24 @@ import React from 'react';
 
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
-import {SplashScreen} from '../pages';
-import HomeScreen from '../pages/HomeScreen';
+import {ScanQrCode, SplashScreen, HomeScreen} from '../pages';
 
 const Stack = createStackNavigator();
 
 const Router = () => {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator initialRouteName="HomeScreen">
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen
         name="HomeScreen"
         component={HomeScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+      <Stack.Screen
+        name="ScanQrCode"
+        component={ScanQrCode}
         options={{
           headerShown: false,
         }}

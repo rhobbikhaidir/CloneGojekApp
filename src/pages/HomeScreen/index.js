@@ -10,7 +10,10 @@ import HomeMainFeature from '../../container/organisms/HomeMainFeature';
 import HomeNavBar from '../../container/organisms/HomeNavBar';
 import ScrollableProduct from '../../container/organisms/ScrollableProduct';
 
-const HomeScreen = () => {
+const HomeScreen = ({navigation}) => {
+  const HandleGoTo = (screen) => {
+    navigation.navigate(screen);
+  };
   return (
     <View style={{flex: 1}}>
       <ScrollView>
@@ -20,7 +23,7 @@ const HomeScreen = () => {
           {/*Gopay*/}
           <View style={{marginHorizontal: 17, marginTop: 20}}>
             <GopaySaldo />
-            <HomeGopayFeature />
+            <HomeGopayFeature onPress={() => HandleGoTo('ScanQrCode')} />
           </View>
           {/* main features */}
           <HomeMainFeature />

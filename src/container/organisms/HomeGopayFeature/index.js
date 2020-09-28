@@ -2,7 +2,7 @@ import React from 'react';
 import {View, Text} from 'react-native';
 import GopayFeature from '../../../components/molecules/GopayFeature';
 
-const HomeGopayFeature = () => {
+const HomeGopayFeature = (props) => {
   return (
     <View
       style={{
@@ -16,6 +16,7 @@ const HomeGopayFeature = () => {
       <GopayFeature
         source={require('../../../assest/icon/pay.png')}
         title="Pay"
+        onPress={props.onPress}
       />
       <GopayFeature
         source={require('../../../assest/icon/nearby.png')}
