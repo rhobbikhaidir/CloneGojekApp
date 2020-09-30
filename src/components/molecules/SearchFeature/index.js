@@ -1,7 +1,8 @@
 import React from 'react';
 import {View, TextInput, Image} from 'react-native';
+import {TouchableOpacity} from 'react-native-gesture-handler';
 
-const SearchFeature = () => {
+const SearchFeature = (props) => {
   return (
     <View
       style={{
@@ -35,10 +36,12 @@ const SearchFeature = () => {
           justifyContent: 'center',
           marginTop: 10,
         }}>
-        <Image
-          source={require('../../../assest/icon/qrcode.png')}
-          style={{width: 25, height: 25}}
-        />
+        <TouchableOpacity onPress={props.onPress}>
+          <Image
+            source={require('../../../assest/icon/qrcode.png')}
+            style={{width: 25, height: 25}}
+          />
+        </TouchableOpacity>
       </View>
     </View>
   );

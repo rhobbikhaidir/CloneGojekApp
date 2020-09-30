@@ -19,11 +19,11 @@ const HomeScreen = ({navigation}) => {
       <ScrollView>
         <View style={{flex: 1, backgroundColor: 'white'}}>
           {/* Search Bar */}
-          <SearchFeature />
+          <SearchFeature onPress={() => HandleGoTo('ScanQrCode')} />
           {/*Gopay*/}
           <View style={{marginHorizontal: 17, marginTop: 20}}>
             <GopaySaldo />
-            <HomeGopayFeature onPress={() => HandleGoTo('ScanQrCode')} />
+            <HomeGopayFeature onPress={() => alert('Kosong')} />
           </View>
           {/* main features */}
           <HomeMainFeature />
