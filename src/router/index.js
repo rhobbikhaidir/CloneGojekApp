@@ -1,13 +1,27 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {ScanQrCode, SplashScreen, HomeScreen} from '../pages';
+import {ScanQrCode, SplashScreen, HomeScreen, LoginScreen} from '../pages';
 
 const Stack = createStackNavigator();
 
 const Router = () => {
   return (
-    <Stack.Navigator initialRouteName="HomeScreen">
-      <Stack.Screen name="SplashScreen" component={SplashScreen} />
+    <Stack.Navigator initialRouteName="SplashScreen">
+      <Stack.Screen
+        name="SplashScreen"
+        component={SplashScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
+
+      <Stack.Screen
+        name="LoginScreen"
+        component={LoginScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Stack.Screen
         name="HomeScreen"
         component={HomeScreen}
